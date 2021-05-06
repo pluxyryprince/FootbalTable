@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FootbalTable.MainPage"
+             Title="Футбольный матч">
+    <ContentPage.Content>
+        <StackLayout Spacing="10" Padding="5"
+        x:Name="outerStack">
+           
+            <ScrollView>
+                <StackLayout Spacing="5" Margin="10">
+                    <StackLayout x:Name="Main" Orientation="Horizontal" HorizontalOptions="FillAndExpand" Spacing="100" Margin="15,0,0,0">
+                        <Image x:Name="img_rus" Source= "russia.png"
+                               Aspect="AspectFill"
+                               WidthRequest="150"
+                               HeightRequest="100"
+                                HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand"/>
+                        <Label Text="0" FontSize="40" x:Name="rus_count" VerticalOptions="Center"/>
+                        <Label Text=":" FontSize="40" x:Name="spacer" VerticalOptions="Center"/>
+                        <Label Text="0" FontSize="40" x:Name="spain_count" VerticalOptions="Center"/>
+                        <Image x:Name="img_spain" Source="spain.png"
+                               Aspect="AspectFill"
+                               WidthRequest="150"
+                               HeightRequest="100"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Spacing="110" x:Name="buttons" HorizontalOptions="Center" VerticalOptions="Fill">
+                        <Button x:Name="Russia" Text="Russia" Clicked="Russia_Clicked" Margin="-20,0,0,0"></Button>
+                        <Button x:Name="Spain" Text="Spain" Clicked="Spain_Clicked" Margin="20,0,0,0"></Button>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="-15, 10, 0, 70" x:Name="reset_layout" HorizontalOptions="Center" VerticalOptions="Center">
+
+                        <Button x:Name="Reset" Text="Reset" Clicked="Reset_Clicked"></Button>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Fill" VerticalOptions="Fill">
+                        <Button x:Name="Switcher" Text ="Change language" Clicked="Switcher_Clicked"></Button>
+                    </StackLayout>
+                    
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
